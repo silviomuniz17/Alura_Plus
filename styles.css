@@ -7,5 +7,12 @@
 
 body {
     background-color: var(--cor-de-fundo);
-    /*    definir uma cor */
+    /*    definir uma cor de fundo */
+    color: var(--branco-principal);
+    /*    cor  do texto */
+}
+
+*{
+    margin: 0;
+    padding: 0;
 }
