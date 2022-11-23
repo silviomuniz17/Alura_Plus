@@ -1,8 +1,9 @@
 :root {
-    --branco-principal: #ffffff;
-    --cinza-secundario: #c0c0c0;
+    --botao-azul-efeito: #5899e8;
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
     --botao-azul: #167BF7;
-    --cor-de-fundo: #00030c;
+    --cor-de-fundo: #00030C;
     --fonte-principal: 'Inter';
     /*    criando uma variavel para puxar a fonte que eu quero */
 }
@@ -59,6 +60,14 @@ body {
     /* tirar o sublinhado da escrita desse botão     */
     margin-bottom: 1em;
     /*colocando uma margim no botão */
+}
+
+.container__botao:hover{
+    /*quando estiver com o mouse no botão vai mudar de cor */
+    background-color: var(--botao-azul-efeito);
+    /*botão vai ficar com essa cor */
+    color: var(--cor-de-fundo);
+    /*as letras vai ficar com essa cor*/
 }
 
 .botao_secundario {
@@ -118,3 +127,70 @@ body {
 .container__descricao {
     padding: 2em;
 }
+
+.dispositivos {
+    text-align: center;
+    /*colocar tudo que está nessa classe centralizado*/
+}
+
+.dispositivos__lista {
+    display: flex;
+    /*clocar tudo um do lado do outro em uma linha */
+    justify-content: center;
+    /*colocar tudo centralizado os itens da lista*/
+    list-style-type: none;
+    /*remover os pontinho na frente de cada item da lista*/
+    margin: 5em;
+    /*colocando uma margim para todos os lados*/
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    /*colocando um tamanho de letra para o titulo */
+    color: var(--branco-principal);
+    /*cor para as letras*/
+}
+
+.lista__item {
+    font-size: 32px;
+    /*colocando um tamanho de letra para nome que fica em baixo da imagem */
+    color: var(--branco-principal);
+    /*cor para as letras*/
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    /*colocar tudo um do lado do outro em uma linha */
+    justify-content: center;
+    /*colocar tudo centralizado os itens da lista*/
+    list-style-type: none;
+    /*remover os pontinho na frente de cada item da lista*/
+    margin-top: 1em;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.lista__link a:hover{
+    /*quando eu coloco o mouse em cima muda de cor*/
+    color: var(--botao-azul);
+}
+
+.lista__link a:active{
+    color: purple;
+}
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+
