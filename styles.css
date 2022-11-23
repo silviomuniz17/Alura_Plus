@@ -1,8 +1,10 @@
 :root {
     --branco-principal: #ffffff;
     --cinza-secundario: #c0c0c0;
-    --botao-azul: #16bf7;
+    --botao-azul: #167BF7;
     --cor-de-fundo: #00030c;
+    --fonte-principal: 'Inter';
+    /*    criando uma variavel para puxar a fonte que eu quero */
 }
 
 body {
@@ -10,6 +12,10 @@ body {
     /*    definir uma cor de fundo */
     color: var(--branco-principal);
     /*    cor  do texto */
+    font-family: var(--fonte-principal);
+    /*    chamanado a variavel que está salva minhas fontes */
+    font-size: 16px;
+    font-weight: 400;
 }
 
 * {
@@ -24,8 +30,91 @@ body {
     /*não quero que fica repetindo o que já foi */
     background-size: contain;
     /*  para definir o tamanho, ficar dentro do quadrado  */
+    align-items: center;
+    /*alinhado todos os texto no centro da coluna*/
+    text-align: center;
+    /*alinha as informações dentro (exemplo a escrita dentro do botaõ ficou centralizado)*/
 }
 
 .container {
     height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /*separando a grid em duas colunas de 50 % cada uma */
+
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    /* colocando um boltão da cor azul*/
+    border-radius: 5px;
+    /* arrendondar as bordas do botão*/
+    padding: 1em;
+    /* tamanho do botão (em tamanho da fonte)*/
+    color: var(--branco-principal);
+    /*cor da escrita*/
+    display: block;
+    /*pega o bloco imteiro (tela inteira)*/
+    text-decoration: none;
+    /* tirar o sublinhado da escrita desse botão     */
+    margin-bottom: 1em;
+    /*colocando uma margim no botão */
+}
+
+.botao_secundario {
+    background-color: transparent;
+    /*colocando a cor transparenteno botão*/
+    border: 2px solid var(--branco-principal);
+    /*criando uma borda com uma cor solida branca*/
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagens {
+    margin: 1em 0 2em 0;
+    /*criando uma margem 4 valor primeiro cima, direita, baixo, esquerda (igual relogio) */
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;
+    /*tamanho da imagem*/
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+    /*margem em baixo */
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    /*colocando em linha (já que tem apenas uma fica certinho)*/
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
 }
